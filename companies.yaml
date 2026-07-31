@@ -1,0 +1,519 @@
+# =============================================================================
+# Companies to watch — the shared list
+# =============================================================================
+# This file is maintained upstream and shared by everyone using this watcher.
+# YOUR OWN filters (stack, locations, experience level) live in `config.yaml`,
+# not here — so you can pull new companies from upstream without touching your
+# personal setup.
+#
+# Found a company that's missing? Add it below and open a PR — see
+# CONTRIBUTING.md. Everyone using the watcher gets it.
+#
+# HOW TO ADD A COMPANY (takes ~1 minute):
+#   1. Open the company's careers page and click any job posting.
+#   2. Look at the URL of the job board:
+#        boards.greenhouse.io/SLUG or job-boards.greenhouse.io/SLUG -> ats: greenhouse
+#        jobs.lever.co/SLUG                                         -> ats: lever
+#        jobs.ashbyhq.com/SLUG                                      -> ats: ashby
+#        jobs.smartrecruiters.com/SLUG                              -> ats: smartrecruiters
+#        COMPANY.wdX.myworkdayjobs.com/en-US/SITE                   -> ats: workday (paste full url)
+#   3. Add an entry below, then run:  python job_watcher.py --test
+#      to confirm it fetches correctly before relying on it.
+#
+# NOTE: The slugs below are common/likely values — RUN --test ONCE and remove
+# or fix any entry that errors. Company career systems change over time.
+# =============================================================================
+
+companies:
+  # ------------- Startups / product companies (fast-moving, check often) ----
+  - name: Razorpay
+    ats: greenhouse
+    slug: razorpaysoftwareprivatelimited
+  - name: Postman
+    ats: greenhouse
+    slug: postman
+  - name: BrowserStack
+    ats: workday
+    url: https://browserstack.wd3.myworkdayjobs.com/en-US/External
+  - name: CRED
+    ats: lever
+    slug: cred
+  - name: Groww
+    ats: greenhouse
+    slug: groww
+  - name: Meesho
+    ats: lever
+    slug: meesho
+  - name: Whatfix
+    ats: smartrecruiters
+    slug: Whatfix
+  - name: Netradyne
+    ats: greenhouse
+    slug: netradyne
+  - name: Observe.AI
+    ats: greenhouse
+    slug: observeai
+  - name: Zeta
+    ats: lever
+    slug: zeta
+  - name: PhonePe
+    ats: greenhouse
+    slug: phonepe
+  - name: Freshworks
+    ats: smartrecruiters
+    slug: freshworks
+  - name: Swiggy
+    ats: smartrecruiters
+    slug: swiggy
+    # NOTE: verified live but very low posting count — spot-check with
+    # --test and remove if it isn't Swiggy's real active pipeline.
+
+  # ------------- Bengaluru / Pune / Noida-NCR expansion ----------------------
+  - name: InMobi
+    ats: greenhouse
+    slug: inmobi
+  - name: Naukri (Info Edge)
+    ats: greenhouse
+    slug: naukri
+    # NOTE: only ~3 live postings at last check — low volume, keep an eye on it.
+  - name: Druva
+    ats: greenhouse
+    slug: druva
+  - name: Turing
+    ats: greenhouse
+    slug: turing
+  - name: CloudSEK
+    ats: greenhouse
+    slug: cloudsek
+  - name: Harness
+    ats: greenhouse
+    slug: harnessinc
+  - name: Diligent
+    ats: greenhouse
+    slug: diligentcorporation
+  - name: Toast
+    ats: greenhouse
+    slug: toast
+  - name: Kaseya
+    ats: greenhouse
+    slug: kaseya
+  - name: Glean
+    ats: greenhouse
+    slug: gleanwork
+  - name: 6sense
+    ats: greenhouse
+    slug: 6sense
+  - name: Twilio
+    ats: greenhouse
+    slug: twilio
+  - name: FamPay
+    ats: lever
+    slug: fampay
+  - name: Sprinto
+    ats: lever
+    slug: Sprinto
+  - name: Mindtickle
+    ats: lever
+    slug: mindtickle
+  - name: Hevo Data
+    ats: lever
+    slug: hevodata
+  - name: Shipsy
+    ats: smartrecruiters
+    slug: shipsy
+    # NOTE: only ~5 live postings — low volume, spot-check periodically.
+  - name: Unacademy
+    ats: smartrecruiters
+    slug: unacademy
+    # NOTE: only ~3 live postings — low volume, spot-check periodically.
+  - name: Nagarro
+    ats: smartrecruiters
+    slug: Nagarro1
+
+  # ------------- More Bengaluru startups / dev-tools / infra -----------------
+  - name: HackerRank
+    ats: greenhouse
+    slug: hackerrank
+  - name: Sigmoid
+    ats: greenhouse
+    slug: sigmoid
+  - name: Celonis
+    ats: greenhouse
+    slug: celonis
+  - name: Glance
+    ats: greenhouse
+    slug: glance
+  - name: Netskope
+    ats: greenhouse
+    slug: netskope
+  - name: Aerospike
+    ats: greenhouse
+    slug: aerospike
+  - name: Elastic
+    ats: greenhouse
+    slug: elastic
+  - name: GitLab
+    ats: greenhouse
+    slug: gitlab
+  - name: Datadog
+    ats: greenhouse
+    slug: datadog
+  - name: New Relic
+    ats: greenhouse
+    slug: newrelic
+  - name: Databricks
+    ats: greenhouse
+    slug: databricks
+  - name: CockroachLabs
+    ats: greenhouse
+    slug: cockroachlabs
+  - name: AppsFlyer
+    ats: greenhouse
+    slug: appsflyer
+    # NOTE: only ~2 Bangalore postings — low volume, spot-check periodically.
+  - name: Contentstack
+    ats: greenhouse
+    slug: contentstack
+    # NOTE: only ~2 Bangalore postings — low volume, spot-check periodically.
+  - name: SmartBear
+    ats: greenhouse
+    slug: smartbear
+  - name: JFrog
+    ats: greenhouse
+    slug: jfrog
+  - name: SentiLink
+    ats: ashby
+    slug: sentilink
+  - name: CertifyOS
+    ats: ashby
+    slug: certifyos
+  - name: Bureau
+    ats: ashby
+    slug: bureau
+  - name: SigNoz
+    ats: ashby
+    slug: signoz
+  - name: Nium
+    ats: lever
+    slug: nium
+    # NOTE: only ~2 Bangalore postings — low volume, spot-check periodically.
+
+  # ------------- Fintech / legaltech ------------------------------------------
+  - name: Fi Money (epiFi)
+    ats: lever
+    slug: epifi
+  - name: Stable Money
+    ats: lever
+    slug: stable-money1
+  - name: Paytm
+    ats: lever
+    slug: paytm
+  - name: Aspora
+    ats: ashby
+    slug: aspora
+  - name: SpotDraft
+    ats: ashby
+    slug: spotdraft
+
+  # ------------- E-commerce SaaS / gaming / logistics -------------------------
+  - name: CommerceIQ
+    ats: greenhouse
+    slug: commerceiq
+  - name: Quince
+    ats: greenhouse
+    slug: quince
+  - name: Krafton India
+    ats: greenhouse
+    slug: kraftonindia
+  - name: Zynga
+    ats: greenhouse
+    slug: zyngacareers
+  - name: Scopely
+    ats: greenhouse
+    slug: scopely
+  - name: Skillz Inc
+    ats: greenhouse
+    slug: skillzinc
+  - name: Coupang
+    ats: greenhouse
+    slug: coupang
+  - name: project44
+    ats: greenhouse
+    slug: project44
+  - name: Easyship
+    ats: greenhouse
+    slug: easyship
+  - name: Instawork
+    ats: greenhouse
+    slug: instawork
+  - name: Rockstar Games
+    ats: greenhouse
+    slug: rockstargames
+    # NOTE: only ~2 Bengaluru postings — low volume, spot-check periodically.
+  - name: Bazaarvoice
+    ats: lever
+    slug: bazaarvoice
+  - name: CLO Virtual Fashion
+    ats: lever
+    slug: clovirtualfashion
+  - name: SpotOn
+    ats: ashby
+    slug: Spoton
+    # NOTE: only ~3 Bengaluru postings — low volume, spot-check periodically.
+
+  # ------------- More enterprise infra / cloud / cybersecurity ---------------
+  - name: MongoDB
+    ats: greenhouse
+    slug: mongodb
+  - name: Okta
+    ats: greenhouse
+    slug: okta
+  - name: Zscaler
+    ats: greenhouse
+    slug: zscaler
+  - name: Rubrik
+    ats: greenhouse
+    slug: rubrik
+  - name: Pure Storage
+    ats: greenhouse
+    slug: purestorage
+  - name: Fivetran
+    ats: greenhouse
+    slug: fivetran
+  - name: Smartsheet
+    ats: greenhouse
+    slug: smartsheet
+  - name: Vonage
+    ats: greenhouse
+    slug: vonage
+  - name: Kong Inc
+    ats: ashby
+    slug: kong
+  - name: Snowflake
+    ats: ashby
+    slug: snowflake
+    # NOTE: only ~4 Bengaluru postings, mostly Solutions/Sales Engineer — low volume.
+  - name: Temporal Technologies
+    ats: ashby
+    slug: temporal
+    # NOTE: only 1 Bengaluru posting at last check — very low volume.
+  - name: Arista Networks
+    ats: smartrecruiters
+    slug: AristaNetworks
+  - name: ServiceNow
+    ats: smartrecruiters
+    slug: ServiceNow
+  - name: Canva
+    ats: smartrecruiters
+    slug: Canva
+    # NOTE: only 1 Bengaluru posting at last check, non-engineering — very low volume.
+
+  # ------------- Verified Bangalore-hiring additions (2026-07) ----------------
+  # Each slug below was live-probed against its ATS API on 2026-07-20; the
+  # "blr" note is the count of Bengaluru/Karnataka postings at that moment.
+  - name: Tekion
+    ats: greenhouse
+    slug: tekion
+    # blr=43 — strong Bengaluru pipeline (auto-retail SaaS, HQ presence).
+  - name: Stripe
+    ats: greenhouse
+    slug: stripe
+    # blr=43 — large Bengaluru engineering hub.
+  - name: Roku
+    ats: greenhouse
+    slug: roku
+    # blr=41 — sizeable Bengaluru R&D centre.
+  - name: Sarvam AI
+    ats: ashby
+    slug: sarvam
+    # blr=56 — India-first AI lab, almost entirely Bengaluru.
+  - name: Bosch
+    ats: smartrecruiters
+    slug: BoschGroup
+    # blr=14 — large Bengaluru (Bosch Global Software / RBEI) base.
+  - name: Tide
+    ats: greenhouse
+    slug: tide
+    # blr=7 — Bengaluru tech centre (fintech for SMEs).
+  - name: Airbnb
+    ats: greenhouse
+    slug: airbnb
+    # blr=4 — Bengaluru tech hub.
+  - name: Samsara
+    ats: greenhouse
+    slug: samsara
+    # blr=4 — Bengaluru engineering (IoT / fleet).
+  - name: Sumo Logic
+    ats: greenhouse
+    slug: sumologic
+    # blr=3 — Bengaluru dev centre (observability).
+  - name: Coinbase
+    ats: greenhouse
+    slug: coinbase
+    # blr low but large India/remote pipeline — worth watching.
+  - name: Amplitude
+    ats: greenhouse
+    slug: amplitude
+    # blr low but active India/remote postings — product analytics.
+  - name: Zeta Global
+    ats: greenhouse
+    slug: zetaglobal
+    # blr=19 — Bengaluru engineering (marketing-tech; distinct from Zeta/epiFi).
+  - name: Anthropic
+    ats: greenhouse
+    slug: anthropic
+    # blr=3 — small but growing Bengaluru presence (AI lab).
+  - name: LaunchDarkly
+    ats: greenhouse
+    slug: launchdarkly
+    # blr low — feature-flag/dev-tools, occasional Bengaluru roles.
+
+  # ------------- Large companies on Workday (paste careers URL) -------------
+  - name: Salesforce
+    ats: workday
+    url: https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site
+    search_text: bangalore
+  - name: NVIDIA
+    ats: workday
+    url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite
+    search_text: bangalore
+  - name: Adobe
+    ats: workday
+    url: https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced
+    search_text: bangalore
+  - name: Target India
+    ats: workday
+    url: https://target.wd5.myworkdayjobs.com/en-US/targetcareers
+    search_text: bangalore
+  - name: Lowe's India
+    ats: workday
+    url: https://lowes.wd5.myworkdayjobs.com/en-US/LWS_External_CS
+    search_text: bangalore
+  - name: Wells Fargo
+    ats: workday
+    url: https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs
+    search_text: bangalore
+  - name: Visa
+    ats: workday
+    url: https://visa.wd5.myworkdayjobs.com/en-US/Visa
+    search_text: bangalore
+  - name: Mastercard
+    ats: workday
+    url: https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers
+    search_text: india
+  - name: Cisco
+    ats: workday
+    url: https://cisco.wd5.myworkdayjobs.com/en-US/Cisco_Careers
+    search_text: bangalore
+  - name: Uniphore
+    ats: workday
+    url: https://uniphore.wd503.myworkdayjobs.com/Uniphore
+    search_text: bangalore
+  - name: Sprinklr
+    ats: workday
+    url: https://sprinklr.wd1.myworkdayjobs.com/sprinklr/careers
+    search_text: gurgaon
+  - name: Palo Alto Networks
+    ats: workday
+    url: https://paloaltonetworks.wd5.myworkdayjobs.com/en-US/panwexternalcareers
+    search_text: bangalore
+  - name: F5
+    ats: workday
+    url: https://ffive.wd5.myworkdayjobs.com/en-US/f5jobs
+    search_text: bangalore
+  - name: CrowdStrike
+    ats: workday
+    url: https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers
+    search_text: bangalore
+  - name: HPE
+    ats: workday
+    url: https://hpe.wd5.myworkdayjobs.com/en-US/Jobsathpe
+    search_text: bangalore
+  - name: Genesys
+    ats: workday
+    url: https://genesys.wd1.myworkdayjobs.com/en-US/Genesys
+    search_text: bangalore
+    # NOTE: only ~3 Bangalore postings at last check — low volume.
+  - name: Forcepoint
+    ats: workday
+    url: https://forcepoint.wd1.myworkdayjobs.com/en-US/external-careers
+    search_text: bangalore
+    # NOTE: only ~3 Bengaluru postings at last check — low volume.
+  - name: Trend Micro
+    ats: workday
+    url: https://trendmicro.wd3.myworkdayjobs.com/en-US/External
+    search_text: bangalore
+    # NOTE: only ~3 Bangalore postings at last check, mostly sales-adjacent — low volume.
+
+  # ------------- Verified Bangalore Workday tenants (probed 2026-07-20) -------
+  # "blr" = Bengaluru postings returned for searchText=bangalore at probe time.
+  - name: Intel
+    ats: workday
+    url: https://intel.wd1.myworkdayjobs.com/en-US/External
+    search_text: bangalore
+    # blr=20 — large Bengaluru R&D (software + silicon).
+  - name: Broadcom (VMware)
+    ats: workday
+    url: https://broadcom.wd1.myworkdayjobs.com/en-US/External_Career
+    search_text: bangalore
+    # blr=20 — VMware Bengaluru engineering, now under Broadcom.
+  - name: Deutsche Bank
+    ats: workday
+    url: https://db.wd3.myworkdayjobs.com/en-US/DBWebsite
+    search_text: bangalore
+    # blr=20 — huge Bengaluru/Pune tech centre.
+  - name: Applied Materials
+    ats: workday
+    url: https://amat.wd1.myworkdayjobs.com/en-US/External
+    search_text: bangalore
+    # blr=19 — Bengaluru engineering (software + hardware).
+  - name: Analog Devices
+    ats: workday
+    url: https://analogdevices.wd1.myworkdayjobs.com/en-US/External
+    search_text: bangalore
+    # blr=16 — Bengaluru design centre (embedded/software roles too).
+  - name: 3M
+    ats: workday
+    url: https://3m.wd1.myworkdayjobs.com/en-US/Search
+    search_text: bangalore
+    # blr=20 — Bengaluru R&D/tech centre.
+  - name: Nasdaq
+    ats: workday
+    url: https://nasdaq.wd1.myworkdayjobs.com/en-US/Global_External_Site
+    search_text: bangalore
+    # blr=13 — Bengaluru technology hub (fintech infra).
+  - name: eBay
+    ats: workday
+    url: https://ebay.wd5.myworkdayjobs.com/en-US/apply
+    search_text: bangalore
+    # blr=7 — Bengaluru product/engineering centre.
+  - name: Autodesk
+    ats: workday
+    url: https://autodesk.wd1.myworkdayjobs.com/en-US/Ext
+    search_text: bangalore
+    # blr=5 — Bengaluru engineering.
+  - name: PayPal
+    ats: workday
+    url: https://paypal.wd1.myworkdayjobs.com/en-US/jobs
+    search_text: bangalore
+    # blr=4 — Bengaluru/Chennai technology centres.
+  - name: Morgan Stanley
+    ats: workday
+    url: https://ms.wd5.myworkdayjobs.com/en-US/External
+    search_text: bangalore
+    # NOTE: only ~1 Bengaluru posting surfaced at probe time — low volume, keep watching.
+
+  # Add more using the instructions at the top.
+  # Walmart Global Tech: skipped for now - its Workday tenant (wd5/walmart)
+  # is mid-migration and the jobs API returns ERR_TENANT_MIGRATED (410).
+  # Re-check https://walmart.wd5.myworkdayjobs.com/en-US/WalmartExternal
+  # later and re-add once the API responds again.
+  # NOT ADDED (no supported ATS - can't be polled by this watcher):
+  #   Flipkart (TurboHire), Myntra (custom), JPMorgan (Oracle Cloud HCM),
+  #   Goldman Sachs (in-house), SAP (SuccessFactors), Chargebee (SuccessFactors),
+  #   Capillary (Skillate), Vymo (Darwinbox), Yellow.ai (Zoho Recruit),
+  #   Ather Energy (custom), Hasura/PromptQL (Gem), slice (Kula.ai),
+  #   Jupiter Money (Keka), smallcase (Freshteam), Zepto (TalentRecruit),
+  #   MoEngage (Trakstar), CleverTap (Kula.ai), Tracxn (Trakstar),
+  #   Cashfree (Keka), M2P Fintech (Darwinbox), Intuit (Radancy TalentBrew -
+  #   moved off Workday entirely).
