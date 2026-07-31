@@ -568,8 +568,12 @@ def main():
         fresh = [j for j in hits if j["id"] not in seen]
         print(f"[ok] {name}: {len(jobs)} postings, {len(hits)} match, {len(fresh)} new")
 
+        # Only mark already-seen hits. Fresh jobs are marked seen AFTER
+        # the deep check + notification so that failures can be retried.
+        fresh_ids = {j["id"] for j in fresh}
         for j in hits:
-            seen.add(j["id"])
+            if j["id"] not in fresh_ids:
+                seen.add(j["id"])
         for j in fresh:
             new_matches.append((name, j, filters))
         time.sleep(1)  # be polite to APIs
@@ -577,6 +581,9 @@ def main():
     if first_run and not TEST_MODE:
         # First run just builds the baseline so you aren't spammed with
         # every existing posting. Alerts start from the next run.
+        # Mark all fresh jobs as seen for the baseline.
+        for _name, j, _filters in new_matches:
+            seen.add(j["id"])
         print(f"First run: baseline of {len(seen)} matching jobs saved. "
               f"Alerts begin next run.")
         save_state(seen)
@@ -594,6 +601,8 @@ def main():
         ok, exp_note, skills = vet_new_job(j, filters)
         if not ok:
             print(f"[skip] {name}: {j['title']} ({exp_note or 'no stack match'})")
+            # Mark deep-check rejects as seen so we don't re-check every run.
+            seen.add(j["id"])
             continue
         text = (f"🔔 NEW FRESHER OPENING\n\n"
                 f"🏢 {name}\n"
@@ -605,10 +614,10 @@ def main():
         sent = send_telegram(text)
         if sent:
             alerted += 1
+            seen.add(j["id"])
         else:
             failed += 1
-            # Un-mark it so the next run retries instead of losing the alert.
-            seen.discard(j["id"])
+            # Do NOT add to seen — next run retries the alert.
         print(f"[alert{'✓' if sent else '✗'}] {name}: {j['title']}")
         time.sleep(1)
 
