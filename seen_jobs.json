@@ -1,5 +1,6 @@
 [
 "ashby:aspora:4b794978-dfa9-4618-9cfc-0a0a4598dca8",
+"ashby:bureau:9a5ea099-9ecf-4e61-814a-55f44624b888",
 "ashby:certifyos:4bcdec99-9f2e-416c-8e26-498c94c5898a",
 "ashby:certifyos:4be4bd2f-0ebf-41a4-937b-21290aae4878",
 "ashby:sarvam:86ae80f8-b7eb-43a4-afde-fef58e77e23e",
@@ -110,6 +111,7 @@
 "lever:paytm:4a9f8209-5c3f-4867-aa17-ed9c7bb21eaf",
 "lever:paytm:5648edd6-b73b-4156-96f5-343f4d851610",
 "lever:stable-money1:2dba8a2d-abe7-4cbe-bce5-9f7ee7a6c31e",
+"lever:stable-money1:76f3dbbc-5bef-4785-a7b2-2226f706b944",
 "lever:stable-money1:bfcb73b0-353c-4b78-b489-02db4ccaa637",
 "smartrecruiters:AristaNetworks:744000132384569",
 "smartrecruiters:AristaNetworks:744000132384629",
@@ -140,6 +142,7 @@
 "workday:cisco:/job/Bangalore-India/Software-Engineer---AI-Software---Platform_2018490",
 "workday:cisco:/job/Bangalore-India/Software-Engineer---AI-Software---Platform_2018799-1",
 "workday:cisco:/job/Bangalore-India/Software-Engineer--AI-_2017407-1",
+"workday:cisco:/job/Bangalore-India/Software-Engineer--Backend--Golang--Python-_2021415",
 "workday:cisco:/job/Bangalore-India/Software-Engineer--Delivery-Platform_2017487",
 "workday:cisco:/job/Bangalore-India/Software-Engineer_2016475-1",
 "workday:cisco:/job/Bangalore-India/Software-Engineer_2017216-1",
